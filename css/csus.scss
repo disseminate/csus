@@ -1,0 +1,79 @@
+$uwocolor: #4f2683;
+
+.footer-copyright {
+	text-align: center;
+	line-height: 50px;
+	height: 50px;
+	max-height: 50px;
+}
+
+.img-fullwidth {
+	width: 100vw;
+	overflow: hidden;
+	height: 50vh;
+	margin-top: 50px;
+	img {
+		position: relative;
+		transform: translateY( -30% );
+		width: 100%;
+	}
+}
+
+.googlemap {
+	margin-bottom: 50px;
+}
+
+body {
+	margin-bottom: 50px; // footer
+}
+
+@media (max-width: 767px) {
+	footer {
+		.navbar {
+			min-height: 0px;
+		}
+	}
+	.footer-copyright {
+		font-size: 10px;
+		line-height: 30px;
+		height: 30px;
+		max-height: 30px;
+	}
+	body {
+		margin-bottom: 30px; // footer
+	}
+}
+@media (min-width: 768px) {
+	body {
+		margin-bottom: 50px; // footer
+	}
+}
+
+.navbar-csus {
+	background-color: $uwocolor;
+	border-color: lighten( $uwocolor, 10% );
+
+	color: lighten( $uwocolor, 40% );
+
+	border-radius: 0px;
+
+	a {
+		color: lighten( $uwocolor, 60% );
+		transition: background-color 0.1s;
+	}
+
+	li a:hover, li a:focus, .active, a.active {
+		background-color: darken( $uwocolor, 10% );
+	}
+
+	.icon-bar {
+		background-color: lighten( $uwocolor, 60% );
+	}
+}
+
+.csus-logo {
+	display: block;
+	margin: auto;
+	width: 50%;
+	max-width: 600px;
+}

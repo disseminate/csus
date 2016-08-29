@@ -1,0 +1,51 @@
+<div class="container">
+	<section id="exec">
+		<h1>Executives</h1>
+		<hr>
+		<p>
+			<div class="panel panel-default hidden-xs" ng-repeat="exec in vm.execs">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-sm-2 col-xs-2">
+							<img ng-if="exec.image" ng-src="{{exec.image}}" class="img-circle img-responsive" />
+							<img ng-if="!exec.image" src="images/unknown.png" class="img-circle img-responsive" />
+						</div>
+						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5">
+							<h4>{{exec.name}}</h4>
+							<b>{{exec.position}}</b>
+							<br>{{exec.degree}}
+							<br><a ng-href="mailto:{{exec.email}}" ng-if="exec.email">{{exec.email}}</a>
+						</div>
+						<div class="col-lg-8 col-md-7 col-sm-6 col-xs-5">
+							<p ng-if="exec.bio">{{exec.bio}}</p>
+							<p ng-if="!exec.bio">TBA</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default visible-xs" ng-repeat="exec in vm.execs">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-xs-6">
+							<img ng-if="exec.image" ng-src="{{exec.image}}" class="img-circle img-responsive" />
+							<img ng-if="!exec.image" src="images/unknown.png" class="img-circle img-responsive" />
+						</div>
+						<div class="col-xs-6">
+							<h4>{{exec.name}}</h4>
+							<b>{{exec.position}}</b>
+							<br>{{exec.degree}}
+							<br><a ng-href="mailto:{{exec.email}}" ng-if="exec.email">{{exec.email}}</a>
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-xs-12">
+							<p ng-if="exec.bio">{{exec.bio}}</p>
+							<p ng-if="!exec.bio">TBA</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</p>
+	</section>
+</div>

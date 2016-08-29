@@ -1,0 +1,79 @@
+<div class="container">
+	<section id="contact">
+		<h1>Contact Us</h1>
+		<hr>
+		<ng-map center="{{vm.x}},{{vm.y}}" zoom="17" class="googlemap" disable-default-u-i="true" scrollwheel="false" draggable="false" disable-double-click-zoom="true" keyboard-shortcuts="false" clickable-icons="false" background-color="#FFF">
+			<marker position="{{vm.x}},{{vm.y}}" title="CSUS"></marker>
+		</ng-map>
+		<p>
+			<div class="row hidden-xs">
+				<div class="col-xs-6">
+					<div class="row">
+						<div class="col-xs-1">
+							<i class="fa fa-user fa-2x"></i>
+						</div>
+						<div class="col-xs-10 col-sm-3">
+							<b>In Person</b>
+						</div>
+						<div class="col-xs-12 col-sm-8">
+							Room 12, Middlesex College<br>
+							Western University<br>
+							<a ng-href="http://www.google.com/maps?q={{vm.x}},{{vm.y}}" target="_blank">43&deg;0'35.064"N, 81&deg;16'14.484"W</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="row">
+						<div class="col-xs-1">
+							<i class="fa fa-globe fa-2x"></i>
+						</div>
+						<div class="col-xs-10 col-sm-3">
+							<b>Online</b>
+						</div>
+						<div class="col-xs-12 col-sm-8">
+							Email: <a href="mailto:csus@uwo.ca">csus@uwo.ca</a><br>
+							Facebook: <a href="http://www.facebook.com/westerncsus" target="_blank">/westerncsus</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row visible-xs">
+				<div class="col-xs-6">
+					<div class="row">
+						<div class="col-xs-3">
+							<i class="fa fa-user fa-2x"></i>
+						</div>
+						<div class="col-xs-9">
+							<b>In Person</b>
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-xs-12">
+							Room 12, Middlesex College<br>
+							Western University<br>
+							<a ng-href="http://www.google.com/maps?q={{vm.x}},{{vm.y}}" target="_blank">43&deg;0'35.064"N, 81&deg;16'14.484"W</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="row">
+						<div class="col-xs-3">
+							<i class="fa fa-globe fa-2x"></i>
+						</div>
+						<div class="col-xs-9">
+							<b>Online</b>
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-xs-12">
+							Email: <a href="mailto:csus@uwo.ca">csus@uwo.ca</a><br>
+							Facebook: <a href="http://www.facebook.com/westerncsus" target="_blank">/westerncsus</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</p>
+	</section>
+</div>

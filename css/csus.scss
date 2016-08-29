@@ -77,3 +77,22 @@ body {
 	width: 50%;
 	max-width: 600px;
 }
+
+#news {
+	.panel-heading {
+		h3 {
+			margin: 0;
+			display: inline-block;
+		}
+		small {
+			float: right;
+			color: #999;
+		}
+	}
+	.panel-body {
+		margin: 0 20px;
+		p {
+			margin: 0;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+<div class="container">
+	<section id="news">
+		<h1>News</h1>
+		<hr>
+		<p>
+			<div class="panel panel-default" ng-repeat="news in vm.news | orderBy: '-postdate'">
+				<div class="panel-heading"><h3>{{news.title}}</h3> <small>{{news.postdate | amDateFormat:'MMM Do, YYYY'}}</small></div>
+				<div class="panel-body">
+					<div class="row"><p ng-bind-html="news.html"></p></div>
+				</div>
+			</div>
+		</p>
+	</section>
+</div>

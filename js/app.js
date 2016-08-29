@@ -3,5 +3,6 @@
 angular
 	.module( "csus", [
 		"ui.router",
-		"ngMap"
+		"ngMap",
+		"angularMoment"
 	] );

@@ -2,7 +2,7 @@
 
 angular
 	.module( "csus" )
-	.controller( "NewsController", function( $sce ) {
+	.controller( "NewsController", ["$sce", function( $sce ) {
 		var vm = this;
 
 		vm.news = []; // TODO: database
@@ -16,4 +16,4 @@ angular
 		for( var i = 0; i < vm.news.length; i++ ) {
 			vm.news[i].html = $sce.trustAsHtml( vm.news[i].html );
 		}
-	} );
+	}] );

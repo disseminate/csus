@@ -2,9 +2,8 @@
 	header( "Content-Type: application/json" );
 	ini_set( "display_errors", "0" );
 
-	//$inputj = file_get_contents( "php://input" ); // weirdly only works on PUT and not POST
-	//$in = json_decode( $inputj, TRUE );
-	$in = $_GET;
+	$inputj = file_get_contents( "php://input", true );
+	$in = json_decode( $inputj, TRUE );
 
 	if( !isset( $in["name"] ) ) {
 		http_response_code( 400 );
@@ -20,9 +19,16 @@
 		exit();
 	}
 
+	if( !isset( $in["message"] ) ) {
+		http_response_code( 400 );
+		$output = array( success => false, error => "message" );
+		echo( json_encode( $output ) );
+		exit();
+	}
+
 	$name = strip_tags( $in["name"] );
 	$email = strip_tags( $in["email"] );
-	$message = strip_tags( $in["message"] || "" );
+	$message = strip_tags( $in["message"] );
 
 	$headers = "From: " . $email . "\r\n";
 	$headers .= "MIME-Version: 1.0\r\n";

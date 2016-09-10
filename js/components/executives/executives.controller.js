@@ -17,12 +17,9 @@ angular
 		} );
 
 		vm.execs.push( {
-			image: "images/killian.jpg",
-			name: "Killian McGuinness",
+			name: "VP Academic",
 			position: "VP Academic",
-			degree: "4th Year CS/Applied Math",
-			email: "kmcguin@uwo.ca",
-			bio: "Hi - I'm Killian McGuinness, and I'm the VP Academic of CSUS. I currently study Computer Science and Applied Mathematics, and I'm passionate about learning, teaching, and research. This year, you can look forward to casual discussions with professors over dinner and exam study sessions. If you have any questions or suggestions, feel free to shoot me an email!"
+			degree: "Computer Science",
 		} );
 
 		vm.execs.push( {

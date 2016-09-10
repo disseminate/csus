@@ -20,7 +20,8 @@
     "components-font-awesome": "^4.6.3",
     "ngmap": "^1.17.3",
     "moment": "momentjs#^2.14.1",
-    "angular-moment": "^0.10.3"
+    "angular-moment": "^0.10.3",
+    "sweetalert": "^1.1.3"
   },
   "overrides": {
     "bootstrap": {

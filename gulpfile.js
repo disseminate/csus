@@ -46,6 +46,11 @@ gulp.task( "copyh", function() {
 		.pipe( gulp.dest( "dist/js" ) );
 } );
 
+gulp.task( "copya", function() {
+	return gulp.src( "api/**/*" )
+		.pipe( gulp.dest( "dist/api" ) );
+} );
+
 gulp.task( "jsmin", function() {
 	return gulp.src( "js/**/*.js" )
 		.pipe( concat( "csus.js" ) )
@@ -91,5 +96,5 @@ gulp.task( "watch", ["jsmin", "cssmin", "jsminv", "cssminv"], function() {
 } );
 
 gulp.task( "build", function() {
-	rs( "clean", ["copy", "copyi", "copym", "copyh", "copyf", "jsmin", "cssmin", "jsminv", "cssminv"] );
+	rs( "clean", ["copy", "copyi", "copym", "copyh", "copya", "copyf", "jsmin", "cssmin", "jsminv", "cssminv"] );
 } );

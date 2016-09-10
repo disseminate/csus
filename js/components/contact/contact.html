@@ -6,72 +6,60 @@
 			<marker position="{{vm.x}},{{vm.y}}" title="CSUS"></marker>
 		</ng-map>
 		<p>
-			<div class="row hidden-xs">
-				<div class="col-xs-6">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
 					<div class="row">
-						<div class="col-xs-1">
-							<i class="fa fa-user fa-2x"></i>
-						</div>
-						<div class="col-xs-10 col-sm-3">
-							<b>In Person</b>
-						</div>
-						<div class="col-xs-12 col-sm-8">
-							Room 12, Middlesex College<br>
-							Western University<br>
-							<a ng-href="http://www.google.com/maps?q={{vm.x}},{{vm.y}}" target="_blank">43&deg;0'35.064"N, 81&deg;16'14.484"W</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6">
-					<div class="row">
-						<div class="col-xs-1">
-							<i class="fa fa-globe fa-2x"></i>
-						</div>
-						<div class="col-xs-10 col-sm-3">
-							<b>Online</b>
-						</div>
-						<div class="col-xs-12 col-sm-8">
-							Email: <a href="mailto:csus@uwo.ca">csus@uwo.ca</a><br>
-							Facebook: <a href="http://www.facebook.com/westerncsus" target="_blank">/westerncsus</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row visible-xs">
-				<div class="col-xs-6">
-					<div class="row">
-						<div class="col-xs-3">
-							<i class="fa fa-user fa-2x"></i>
-						</div>
-						<div class="col-xs-9">
-							<b>In Person</b>
+						<div class="col-xs-12">
+							<div class="row">
+								<div class="col-xs-1">
+									<i class="fa fa-user fa-2x"></i>
+								</div>
+								<div class="col-xs-10 col-sm-3">
+									<b>In Person</b>
+								</div>
+								<div class="col-xs-12 col-sm-8">
+									Room 12, Middlesex College<br>
+									Western University<br>
+									<a ng-href="http://www.google.com/maps?q={{vm.x}},{{vm.y}}" target="_blank">43&deg;0'35.064"N, 81&deg;16'14.484"W</a>
+								</div>
+							</div>
 						</div>
 					</div>
 					<hr>
 					<div class="row">
 						<div class="col-xs-12">
-							Room 12, Middlesex College<br>
-							Western University<br>
-							<a ng-href="http://www.google.com/maps?q={{vm.x}},{{vm.y}}" target="_blank">43&deg;0'35.064"N, 81&deg;16'14.484"W</a>
+							<div class="row">
+								<div class="col-xs-1">
+									<i class="fa fa-globe fa-2x"></i>
+								</div>
+								<div class="col-xs-10 col-sm-3">
+									<b>Online</b>
+								</div>
+								<div class="col-xs-12 col-sm-8">
+									Email: <a href="mailto:csus@uwo.ca">csus@uwo.ca</a><br>
+									Facebook: <a href="http://www.facebook.com/westerncsus" target="_blank">/westerncsus</a>
+								</div>
+							</div>
 						</div>
 					</div>
+					<hr class="visible-xs">
 				</div>
-				<div class="col-xs-6">
-					<div class="row">
-						<div class="col-xs-3">
-							<i class="fa fa-globe fa-2x"></i>
+				<div class="col-xs-12 col-sm-6">
+					<form ng-submit="vm.send()">
+						<div class="form-group">
+							<label for="name">Name</label>
+							<input type="text" class="form-control" id="name" placeholder="Name" ng-model="vm.message.name" required />
 						</div>
-						<div class="col-xs-9">
-							<b>Online</b>
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" class="form-control" id="email" placeholder="Email" ng-model="vm.message.email" required />
 						</div>
-					</div>
-					<hr>
-					<div class="row">
-						<div class="col-xs-12">
-							Email: <a href="mailto:csus@uwo.ca">csus@uwo.ca</a><br>
-							Facebook: <a href="http://www.facebook.com/westerncsus" target="_blank">/westerncsus</a>
+						<div class="form-group">
+							<label for="message">Message</label>
+							<textarea class="form-control" id="message" placeholder="Message" ng-model="vm.message.message"></textarea>
 						</div>
-					</div>
+						<button class="btn btn-default pull-right" type="submit">Send</button>
+					</form>
 				</div>
 			</div>
 		</p>

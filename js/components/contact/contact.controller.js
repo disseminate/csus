@@ -2,7 +2,7 @@
 
 angular
 	.module( "csus" )
-	.controller( "ContactController", ["$http", function( $http ) {
+	.controller( "ContactController", ["$http", "$httpParamSerializer", function( $http, $httpParamSerializer ) {
 		var vm = this;
 		
 		vm.x = 43.0097400;
@@ -13,10 +13,10 @@ angular
 		vm.send = function() {
 			vm.sending = true;
 
-			$http.put( "/api/message", vm.message ).then( function( ret ) {
+			$http.get( "/api/contact?" + $httpParamSerializer( vm.message ) ).then( function( ret ) {
 				vm.sending = false;
 
-				swal( "Success", "Your message has been sent." );
+				swal( "Success", "Your message has been sent.", "success" );
 				vm.message = { };
 			}, function( err ) {
 				vm.sending = false;

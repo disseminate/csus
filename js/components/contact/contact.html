@@ -58,7 +58,7 @@
 							<label for="message">Message</label>
 							<textarea class="form-control" id="message" placeholder="Message" ng-model="vm.message.message"></textarea>
 						</div>
-						<button class="btn btn-default pull-right" type="submit">Send</button>
+						<button class="btn btn-default pull-right" type="submit" ng-disabled="vm.sending">Send</button>
 					</form>
 				</div>
 			</div>

@@ -2,8 +2,9 @@
 	header( "Content-Type: application/json" );
 	ini_set( "display_errors", "0" );
 
-	$inputj = file_get_contents( "php://input" ); // weirdly only works on PUT and not POST
-	$in = json_decode( $inputj, TRUE );
+	//$inputj = file_get_contents( "php://input" ); // weirdly only works on PUT and not POST
+	//$in = json_decode( $inputj, TRUE );
+	$in = $_GET;
 
 	if( !isset( $in["name"] ) ) {
 		http_response_code( 400 );

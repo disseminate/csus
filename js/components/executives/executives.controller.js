@@ -29,9 +29,12 @@ angular
 		} );
 
 		vm.execs.push( {
-			name: "VP Communications",
+			image: "images/yusra.jpg",
+			name: "Yusra Al-Sharafi",
 			position: "VP Communications",
-			degree: "Computer Science"
+			degree: "3rd Year CS",
+			email: "yalshara@uwo.ca",
+			bio: "Hi guys! My name is Yusra Al-Sharafi and I am in my third year of Computer Science here at Western. This year, I'll be serving as VP Communications in CSUS. I look forward to keeping you guys in the loop of the happenings of the organisation and beyond."
 		} );
 
 		vm.execs.push( {

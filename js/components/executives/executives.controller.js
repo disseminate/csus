@@ -17,9 +17,10 @@ angular
 		} );
 
 		vm.execs.push( {
-			name: "VP Academic",
+			name: "Henry He",
 			position: "VP Academic",
-			degree: "Computer Science",
+			degree: "3rd Year CS",
+			email: "che49@uwo.ca"
 		} );
 
 		vm.execs.push( {
@@ -27,6 +28,7 @@ angular
 			name: "Marisa Mathura",
 			position: "VP Social",
 			degree: "1st Year CS",
+			email: "mmathura@uwo.ca",
 			bio: "Hey everyone! I'm Marisa and this year I'll be in charge of co-ordinating and planning CSUS social events. It is my first year here at Western and I am studying Computer Science along with Business. I'm very excited to be a part of CSUS and to meet lots of new people this year at our events!"
 		} );
 
@@ -40,8 +42,9 @@ angular
 		} );
 
 		vm.execs.push( {
-			name: "VP Treasurer",
+			name: "Martin Spassov",
 			position: "VP Treasurer",
-			degree: "Computer Science"
+			degree: "1st Year CS",
+			email: "mspassov@uwo.ca"
 		} );
 	} );

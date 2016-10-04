@@ -23,9 +23,11 @@ angular
 		} );
 
 		vm.execs.push( {
-			name: "VP Social",
+			image: "images/marisa.jpg",
+			name: "Marisa Mathura",
 			position: "VP Social",
-			degree: "Computer Science"
+			degree: "1st Year CS",
+			bio: "Hey everyone! I'm Marisa and this year I'll be in charge of co-ordinating and planning CSUS social events. It is my first year here at Western and I am studying Computer Science along with Business. I'm very excited to be a part of CSUS and to meet lots of new people this year at our events!"
 		} );
 
 		vm.execs.push( {

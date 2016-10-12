@@ -42,9 +42,11 @@ angular
 		} );
 
 		vm.execs.push( {
+			image: "images/martin.jpg",
 			name: "Martin Spassov",
 			position: "VP Treasurer",
 			degree: "1st Year CS",
-			email: "mspassov@uwo.ca"
+			email: "mspassov@uwo.ca",
+			bio: "Hello everyone! My name is Martin and I am in first year Computer Science. I will be the Treasurer in the upcoming year and I will be responsible for managing funds, and specifically designating part of the budget for the amazing events that we plan to host. I can't wait to get started, looking forward to meeting all of you!"
 		} );
 	} );
